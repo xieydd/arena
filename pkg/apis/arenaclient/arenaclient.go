@@ -1,3 +1,10 @@
+/*
+ * @Author: xieydd
+ * @since: 2021-01-21 18:15:59
+ * @lastTime: 2021-02-09 14:58:29
+ * @LastAuthor: Do not edit
+ * @message:
+ */
 package arenaclient
 
 import (
@@ -70,4 +77,8 @@ func (a *ArenaClient) Node() *NodeClient {
 
 func (a *ArenaClient) Data() *DataClient {
 	return NewDataClient(a.namespace, a.arenaConfiger)
+}
+
+func (a *ArenaClient) Dataset() *DatasetClient {
+	return NewDatasetClient(a.namespace, a.arenaConfiger)
 }
